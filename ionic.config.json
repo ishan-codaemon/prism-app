@@ -1,0 +1,7 @@
+{
+  "name": "prsm",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
