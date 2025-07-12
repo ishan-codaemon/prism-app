@@ -1,22 +1,38 @@
-.logo-title {
-  .header-logo {
-    height: 60px;
-    padding: 8px 0;
-    margin-left: 8px;
-    object-fit: contain;
-    object-position: 0 0;
-  }
-}
-
-:host-context(.dark) {
-  .logo-title {
-    .header-logo {
-      filter: brightness(0) invert(1);
-    }
-  }
+.hidden-back {
+  opacity: 0;
+  visibility: hidden;
 }
 ion-back-button {
   --padding-start: 10px;
   --padding-end: 0;
   margin-right: -10px;
+  transition:
+    opacity 0.2s,
+    visibility 0.2s;
+}
+ion-header {
+  ion-toolbar {
+    --min-height: 60px;
+    ion-title {
+      padding: 0;
+      .header-logo {
+        height: 50px;
+        padding: 8px 0;
+        margin: 0 auto;
+        display: block;
+        object-fit: contain;
+      }
+    }
+  }
+}
+:host-context(.dark) {
+  ion-header {
+    ion-toolbar {
+      ion-title {
+        .header-logo {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+  }
 }

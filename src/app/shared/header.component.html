@@ -1,15 +1,15 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start" *ngIf="showBack">
-      <ion-back-button defaultHref="/home"></ion-back-button>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" [class.hidden-back]="!showBack"></ion-back-button>
     </ion-buttons>
-    <div class="logo-title">
+    <ion-title>
       <ion-img
         src="assets/logo.png"
         alt="Acentus Logo"
         class="header-logo"
       ></ion-img>
-    </div>
+    </ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="openMenu()">
         <ion-icon

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgIf } from '@angular/common';
 import {
   IonHeader,
@@ -11,8 +11,10 @@ import {
   IonImg,
   MenuController,
 } from '@ionic/angular/standalone';
-import { reorderThree } from 'ionicons/icons';
+import { reorderThree, chevronBackOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -20,21 +22,35 @@ import { addIcons } from 'ionicons';
   imports: [
     IonHeader,
     IonToolbar,
+    IonTitle,
     IonButtons,
     IonBackButton,
     IonButton,
     IonIcon,
     IonImg,
-    NgIf,
   ],
   standalone: true,
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   @Input() showBack: boolean = false;
-  constructor(private menuController: MenuController) {
-    addIcons({ reorderThree });
+  constructor(private menuController: MenuController, private router: Router) {
+    addIcons({
+      reorderThree,
+      chevronBackOutline,
+    });
   }
-  async openMenu() {
-    await this.menuController.open();
+  ngOnInit() {
+    if (this.showBack === false) {
+      // Only auto-detect if not explicitly set
+      this.showBack = this.router.url !== '/home';
+      this.router.events
+        .pipe(filter((event) => event instanceof NavigationEnd))
+        .subscribe(() => {
+          this.showBack = this.router.url !== '/home';
+        });
+    }
+  }
+  openMenu() {
+    this.menuController.open();
   }
 }

@@ -1,42 +1,43 @@
-<app-header></app-header>
-<ion-content [fullscreen]="true">
-  <ion-grid>
-    <ion-text class="ion-text-center">
-      <h1>What would you<br />like to do?</h1>
-    </ion-text>
-    <ion-card class="ion-no-margin ion-margin-bottom">
-      <ion-card-content>
-        <ion-list>
-          <ion-item routerLink="/replace" detail="true">
-            <ion-icon name="hardware-chip-outline" slot="start"></ion-icon>
-            <ion-label>Replace a non-working or faulty sensor</ion-label>
-          </ion-item>
-          <ion-item routerLink="/track" detail="true">
-            <ion-icon name="cube-outline" slot="start"></ion-icon>
-            <ion-label>Track supply order</ion-label>
-          </ion-item>
-          <ion-item routerLink="/see" detail="true">
-            <ion-icon name="list-outline" slot="start"></ion-icon>
-            <ion-label>See supply order status</ion-label>
-          </ion-item>
-          <ion-item routerLink="/when" detail="true">
-            <ion-icon name="pencil-outline" slot="start"></ion-icon>
-            <ion-label>When do I need updated office visit notes?</ion-label>
-          </ion-item>
-          <ion-item routerLink="/pay" detail="true">
-            <ion-icon name="card-outline" slot="start"></ion-icon>
-            <ion-label>Pay $3.50 account balance</ion-label>
-          </ion-item>
-          <ion-item routerLink="/update" detail="true">
-            <ion-icon name="person-outline" slot="start"></ion-icon>
-            <ion-label>Update personal information</ion-label>
-          </ion-item>
-          <ion-item routerLink="/send" detail="true">
-            <ion-icon name="mail-outline" slot="start"></ion-icon>
-            <ion-label>Send a message to Acentus</ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-card-content>
-    </ion-card>
-  </ion-grid>
+<ion-content>
+  <div class="ion-padding">
+    <ion-grid>
+      <ion-text class="ion-text-center">
+        <h1>What would you<br />like to do?</h1>
+      </ion-text>
+      <ion-card class="ion-no-margin ion-margin-bottom">
+        <ion-card-content>
+          <ion-list>
+            <ion-item routerLink="/replace" detail="true">
+              <ion-icon name="hardware-chip-outline" slot="start"></ion-icon>
+              <ion-label>Replace a non-working or faulty sensor</ion-label>
+            </ion-item>
+            <ion-item routerLink="/track" detail="true">
+              <ion-icon name="cube-outline" slot="start"></ion-icon>
+              <ion-label>Track supply order</ion-label>
+            </ion-item>
+            <ion-item routerLink="/see" detail="true">
+              <ion-icon name="list-outline" slot="start"></ion-icon>
+              <ion-label>See supply order status</ion-label>
+            </ion-item>
+            <ion-item routerLink="/when" detail="true">
+              <ion-icon name="pencil-outline" slot="start"></ion-icon>
+              <ion-label>When do I need updated office visit notes?</ion-label>
+            </ion-item>
+            <ion-item routerLink="/pay" detail="true">
+              <ion-icon name="card-outline" slot="start"></ion-icon>
+              <ion-label>Pay $3.50 account balance</ion-label>
+            </ion-item>
+            <ion-item routerLink="/update" detail="true">
+              <ion-icon name="person-outline" slot="start"></ion-icon>
+              <ion-label>Update personal information</ion-label>
+            </ion-item>
+            <ion-item routerLink="/send" detail="true">
+              <ion-icon name="mail-outline" slot="start"></ion-icon>
+              <ion-label>Send a message to Acentus</ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-grid>
+  </div>
 </ion-content>

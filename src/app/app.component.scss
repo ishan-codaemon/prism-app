@@ -1,0 +1,21 @@
+.ion-page {
+  display: flex;
+  flex-direction: column;
+  
+  ion-content {
+    --padding-top: 0;
+    --padding-bottom: 0;
+    --padding-start: 0;
+    --padding-end: 0;
+  }
+}
+
+ion-app {
+  app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+}

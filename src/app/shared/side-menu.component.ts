@@ -34,7 +34,7 @@ import {
 })
 export class SideMenuComponent {
   @Input() isDarkMode: boolean = false;
-  @Input() onToggleTheme: (isDark: boolean) => void = () => {};
+  @Input() onDarkModeChange!: (isDark: boolean) => void;
 
   constructor(private menuController: MenuController) {}
 
@@ -43,6 +43,6 @@ export class SideMenuComponent {
   }
 
   toggleDarkMode() {
-    this.onToggleTheme(this.isDarkMode);
+    this.onDarkModeChange(this.isDarkMode);
   }
 }

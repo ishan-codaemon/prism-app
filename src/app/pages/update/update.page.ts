@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import {
   IonContent,
   IonList,
@@ -8,9 +9,11 @@ import {
   IonTextarea,
   IonLabel,
   IonCard,
-  IonCardContent
+  IonCardContent,
+  IonText,
 } from '@ionic/angular/standalone';
 import { HeaderComponent } from '../../shared/header.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-update',
@@ -18,6 +21,8 @@ import { HeaderComponent } from '../../shared/header.component';
   styleUrls: ['./update.page.scss'],
   standalone: true,
   imports: [
+    CommonModule,
+    FormsModule,
     IonContent,
     HeaderComponent,
     IonList,
@@ -25,7 +30,7 @@ import { HeaderComponent } from '../../shared/header.component';
     IonButton,
     IonLabel,
     IonCard,
-    IonCardContent
+    IonCardContent,
   ]
 })
 export class UpdatePage {

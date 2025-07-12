@@ -11,7 +11,6 @@ import {
   IonLabel,
   IonIcon,
 } from '@ionic/angular/standalone';
-import { HeaderComponent } from '../shared/header.component';
 import { addIcons } from 'ionicons';
 import {
   hardwareChipOutline,
@@ -29,7 +28,6 @@ import {
   styleUrls: ['home.page.scss'],
   imports: [
     IonContent,
-    HeaderComponent,
     IonText,
     RouterLink,
     IonGrid,
