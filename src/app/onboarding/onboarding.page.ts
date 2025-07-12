@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
@@ -32,7 +32,6 @@ export class OnboardingPage implements OnInit {
   @ViewChild('skipButton', { static: true }) skipButton!: ElementRef;
   @ViewChild('swiperContainer', { static: true }) swiperContainer!: ElementRef;
   swiperModules = [];
-  
   constructor() {
     addIcons({
       chevronForward,
@@ -45,12 +44,9 @@ export class OnboardingPage implements OnInit {
   }
   ngOnInit() {
     this.initSwiper();
-    // Ensure skip button is visible initially
     setTimeout(() => {
       const skipButton = document.querySelector('.skip-button') as HTMLElement;
-      if (skipButton) {
-        skipButton.style.display = 'block';
-      }
+      if (skipButton) skipButton.style.display = 'block';
     }, 100);
   }
   private async initSwiper() {
@@ -62,22 +58,16 @@ export class OnboardingPage implements OnInit {
     const activeIndex = swiper.activeIndex;
     const totalSlides = swiper.slides.length;
     
-    // Hide skip button on the last slide (index 3 for 4 slides)
     const skipButton = document.querySelector('.skip-button') as HTMLElement;
     if (skipButton) {
-      if (activeIndex === totalSlides - 1) {
-        skipButton.style.display = 'none';
-      } else {
-        skipButton.style.display = 'block';
-      }
+      if (activeIndex === totalSlides - 1) skipButton.style.display = 'none';
+      else skipButton.style.display = 'block';
     }
   }
-
   goToNextSlide() {
     const swiper = this.swiperContainer.nativeElement.swiper;
     swiper.slideNext();
   }
-
   goToPrevSlide() {
     const swiper = this.swiperContainer.nativeElement.swiper;
     swiper.slidePrev();

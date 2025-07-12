@@ -4,13 +4,10 @@ import {
   IonCard,
   IonCardHeader,
   IonCardTitle,
-  IonCardSubtitle,
   IonCardContent,
-  IonText,
   IonList,
   IonItem,
   IonLabel,
-  IonListHeader,
 } from '@ionic/angular/standalone';
 @Component({
   selector: 'app-track',

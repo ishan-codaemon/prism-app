@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
+import { IonApp, IonRouterOutlet, MenuController } from '@ionic/angular/standalone';
 import { SideMenuComponent } from './shared/side-menu/side-menu.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { RouteReuseStrategy, Router, NavigationEnd } from '@angular/router';
@@ -23,9 +23,15 @@ import { filter } from 'rxjs/operators';
 export class AppComponent {
   isDarkMode: boolean = false;
   showHeader: boolean = true;
-  constructor(private router: Router) {
+  isMenuOpen: boolean = false;
+  
+  private router = inject(Router);
+  private menuController = inject(MenuController);
+  
+  constructor() {
     this.initializeTheme();
     this.setupRouteListener();
+    this.setupMenuListener();
   }
   private setupRouteListener() {
     this.router.events
@@ -33,6 +39,25 @@ export class AppComponent {
       .subscribe((event: any) => {
         this.showHeader = !event.url.startsWith('/') || event.url !== '/';
       });
+  }
+
+  private setupMenuListener() {
+    // Listen for menu state changes using ionDidOpen and ionDidClose events
+    document.addEventListener('ionDidOpen', (event: any) => {
+      if (event.target.tagName === 'ION-MENU') {
+        this.isMenuOpen = true;
+      }
+    });
+    
+    document.addEventListener('ionDidClose', (event: any) => {
+      if (event.target.tagName === 'ION-MENU') {
+        this.isMenuOpen = false;
+      }
+    });
+  }
+
+  async onOverlayClick() {
+    await this.menuController.close();
   }
   private initializeTheme() {
     const storedTheme = localStorage.getItem('theme');

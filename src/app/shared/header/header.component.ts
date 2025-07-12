@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { NgIf } from '@angular/common';
 import {
   IonHeader,
@@ -33,7 +33,11 @@ import { filter } from 'rxjs/operators';
 })
 export class HeaderComponent implements OnInit {
   @Input() showBack: boolean = false;
-  constructor(private menuController: MenuController, private router: Router) {
+  
+  private menuController = inject(MenuController);
+  private router = inject(Router);
+  
+  constructor() {
     addIcons({
       reorderThree,
       chevronBackOutline,

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import {
@@ -35,7 +35,9 @@ import {
 export class SideMenuComponent {
   @Input() isDarkMode: boolean = false;
   @Input() onDarkModeChange!: (isDark: boolean) => void;
-  constructor(private menuController: MenuController) {}
+  
+  private menuController = inject(MenuController);
+  
   async closeMenu() {
     await this.menuController.close();
   }

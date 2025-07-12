@@ -11,8 +11,13 @@ import {
   IonLabel,
   IonCard,
   IonCardContent,
+  IonCardHeader,
+  IonCardTitle,
   IonListHeader,
+  IonIcon,
 } from '@ionic/angular/standalone';
+import { addIcons } from 'ionicons';
+import { informationCircleOutline } from 'ionicons/icons';
 @Component({
   selector: 'app-replace',
   templateUrl: './replace.page.html',
@@ -25,9 +30,14 @@ import {
     IonLabel,
     IonCard,
     IonCardContent,
-    IonListHeader,
+    IonCardHeader,
+    IonCardTitle,
   ],
 })
 export class ReplacePage {
-  constructor() {}
+  constructor() {
+    addIcons({
+      informationCircleOutline,
+    });
+  }
 }

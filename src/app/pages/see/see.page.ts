@@ -3,14 +3,8 @@ import {
   IonContent,
   IonCard,
   IonCardContent,
-  IonCardHeader,
-  IonCardTitle,
-  IonCardSubtitle,
-  IonText,
   IonList,
   IonItem,
-  IonItemGroup,
-  IonItemDivider,
   IonLabel,
 } from '@ionic/angular/standalone';
 @Component({
