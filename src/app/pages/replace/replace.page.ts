@@ -13,7 +13,6 @@ import {
   IonCardContent,
   IonListHeader,
 } from '@ionic/angular/standalone';
-import { HeaderComponent } from '../../shared/header/header.component';
 @Component({
   selector: 'app-replace',
   templateUrl: './replace.page.html',
@@ -21,7 +20,6 @@ import { HeaderComponent } from '../../shared/header/header.component';
   standalone: true,
   imports: [
     IonContent,
-    HeaderComponent,
     IonList,
     IonItem,
     IonLabel,

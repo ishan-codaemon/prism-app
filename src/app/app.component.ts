@@ -1,21 +1,38 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
 import { SideMenuComponent } from './shared/side-menu/side-menu.component';
 import { HeaderComponent } from './shared/header/header.component';
-import { RouteReuseStrategy } from '@angular/router';
+import { RouteReuseStrategy, Router, NavigationEnd } from '@angular/router';
 import { IonicRouteStrategy } from '@ionic/angular/standalone';
+import { filter } from 'rxjs/operators';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
-  imports: [IonApp, IonRouterOutlet, SideMenuComponent, HeaderComponent],
+  imports: [
+    IonApp,
+    IonRouterOutlet,
+    SideMenuComponent,
+    HeaderComponent,
+    CommonModule,
+  ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   standalone: true,
 })
 export class AppComponent {
   isDarkMode: boolean = false;
-  constructor() {
+  showHeader: boolean = true;
+  constructor(private router: Router) {
     this.initializeTheme();
+    this.setupRouteListener();
+  }
+  private setupRouteListener() {
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event: any) => {
+        this.showHeader = !event.url.startsWith('/') || event.url !== '/';
+      });
   }
   private initializeTheme() {
     const storedTheme = localStorage.getItem('theme');

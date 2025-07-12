@@ -12,7 +12,6 @@ import {
   IonLabel,
   IonListHeader,
 } from '@ionic/angular/standalone';
-import { HeaderComponent } from '../../shared/header/header.component';
 @Component({
   selector: 'app-track',
   templateUrl: './track.page.html',
@@ -20,7 +19,6 @@ import { HeaderComponent } from '../../shared/header/header.component';
   standalone: true,
   imports: [
     IonContent,
-    HeaderComponent,
     IonCard,
     IonCardHeader,
     IonCardTitle,

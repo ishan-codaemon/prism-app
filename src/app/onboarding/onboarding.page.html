@@ -1,0 +1,82 @@
+<ion-content [fullscreen]="true">
+  <swiper-container
+    #swiperContainer
+    [modules]="swiperModules"
+    (slidechange)="onSlideChange($event)"
+    pagination="true"
+  >
+    <swiper-slide>
+      <div class="slide-content">
+        <img src="assets/logo.png" alt="PRSM Logo" class="slide-logo" />
+        <h1><small>Welcome to</small><br />Acentus Patient Mobile App</h1>
+        <p>Your complete parcel management solution</p>
+        <div class="slide-buttons">
+          <ion-button (click)="goToNextSlide()">
+            Next
+            <ion-icon name="chevron-forward" slot="end"></ion-icon>
+          </ion-button>
+        </div>
+        <ion-button
+          fill="clear"
+          class="skip-button"
+          #skipButton
+          routerLink="/home"
+        >
+          Skip
+          <ion-icon name="chevron-forward" slot="end"></ion-icon>
+        </ion-button>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="slide-content">
+        <img src="assets/delivery-truck.svg" alt="" class="svg-img" />
+        <h1>Track Your Parcels</h1>
+        <p>
+          Real-time tracking and notifications keep you informed every step of
+          the way
+        </p>
+        <div class="slide-buttons">
+          <ion-button fill="clear" (click)="goToPrevSlide()">
+            Previous
+          </ion-button>
+          <ion-button fill="outline" (click)="goToNextSlide()">
+            Next
+            <ion-icon name="chevron-forward" slot="end"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="slide-content">
+        <img src="assets/delivered.svg" alt="" class="svg-img" />
+        <h1>Schedule Deliveries</h1>
+        <p>Choose delivery times that work for you</p>
+        <div class="slide-buttons">
+          <ion-button fill="clear" (click)="goToPrevSlide()">
+            Previous
+          </ion-button>
+          <ion-button fill="outline" (click)="goToNextSlide()">
+            Next
+            <ion-icon name="chevron-forward" slot="end"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="slide-content">
+        <img src="assets/text-messages.svg" alt="" class="svg-img" />
+        <h1>Easy Management</h1>
+        <p>Update, replace, or schedule your deliveries with ease</p>
+        <div class="slide-buttons">
+          <ion-button fill="clear" (click)="goToPrevSlide()">
+            Previous
+          </ion-button>
+          <ion-button fill="outline" routerLink="/home">
+            Get Started
+            <ion-icon name="chevron-forward" slot="end"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</ion-content>

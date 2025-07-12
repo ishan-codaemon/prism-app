@@ -13,21 +13,12 @@ import {
   IonItemDivider,
   IonLabel,
 } from '@ionic/angular/standalone';
-import { HeaderComponent } from '../../shared/header/header.component';
 @Component({
   selector: 'app-see',
   templateUrl: './see.page.html',
   styleUrls: ['./see.page.scss'],
   standalone: true,
-  imports: [
-    IonContent,
-    HeaderComponent,
-    IonCard,
-    IonCardContent,
-    IonList,
-    IonItem,
-    IonLabel,
-  ],
+  imports: [IonContent, IonCard, IonCardContent, IonList, IonItem, IonLabel],
 })
 export class SeePage {
   constructor() {}

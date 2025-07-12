@@ -1,8 +1,14 @@
 import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
+    path: '',
+    loadComponent: () =>
+      import('./onboarding/onboarding.page').then((m) => m.OnboardingPage),
+  },
+  {
     path: 'home',
-    loadComponent: () => import('./pages/home/home.page').then((m) => m.HomePage),
+    loadComponent: () =>
+      import('./pages/home/home.page').then((m) => m.HomePage),
   },
   {
     path: 'replace',
@@ -41,5 +47,10 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
+  },
+  {
+    path: 'onboarding',
+    loadComponent: () =>
+      import('./onboarding/onboarding.page').then((m) => m.OnboardingPage),
   },
 ];

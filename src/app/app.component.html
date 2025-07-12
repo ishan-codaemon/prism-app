@@ -5,7 +5,7 @@
   >
   </app-side-menu>
   <div class="ion-page" id="main-content">
-    <app-header></app-header>
+    <app-header *ngIf="showHeader"></app-header>
     <ion-router-outlet></ion-router-outlet>
   </div>
 </ion-app>

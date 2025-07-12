@@ -12,7 +12,6 @@ import {
   IonCardContent,
   IonText,
 } from '@ionic/angular/standalone';
-import { HeaderComponent } from '../../shared/header/header.component';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-update',
@@ -23,7 +22,6 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     FormsModule,
     IonContent,
-    HeaderComponent,
     IonList,
     IonItem,
     IonButton,

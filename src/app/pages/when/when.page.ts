@@ -7,21 +7,12 @@ import {
   IonItem,
   IonLabel,
 } from '@ionic/angular/standalone';
-import { HeaderComponent } from '../../shared/header/header.component';
 @Component({
   selector: 'app-when',
   templateUrl: './when.page.html',
   styleUrls: ['./when.page.scss'],
   standalone: true,
-  imports: [
-    IonContent,
-    HeaderComponent,
-    IonCard,
-    IonCardContent,
-    IonList,
-    IonItem,
-    IonLabel,
-  ],
+  imports: [IonContent, IonCard, IonCardContent, IonList, IonItem, IonLabel],
 })
 export class WhenPage {
   constructor() {}

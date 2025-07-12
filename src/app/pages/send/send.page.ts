@@ -11,7 +11,6 @@ import {
   IonLabel,
   IonButton,
 } from '@ionic/angular/standalone';
-import { HeaderComponent } from '../../shared/header/header.component';
 @Component({
   selector: 'app-send',
   templateUrl: './send.page.html',
@@ -19,7 +18,6 @@ import { HeaderComponent } from '../../shared/header/header.component';
   standalone: true,
   imports: [
     IonContent,
-    HeaderComponent,
     IonCard,
     IonCardContent,
     IonList,

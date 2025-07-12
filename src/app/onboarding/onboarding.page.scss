@@ -1,0 +1,119 @@
+:host {
+  ion-content {
+    --padding-top: 0;
+  }
+  swiper-container {
+    --swiper-theme-color: #ea3f3d;
+    height: 100%;
+    swiper-slide:first-child {
+      background: linear-gradient(135deg, var(--ion-color-primary) 0%, var(--ion-color-secondary) 100%);
+      .slide-content {
+        color: #ffffff;
+        h1,
+        p {
+          color: #ffffff;
+        }
+        .svg-img {
+          width: 100% !important;
+          height: auto !important;
+          aspect-ratio: 1/1 !important;
+          max-width: 300px;
+          margin-bottom: 2rem;
+        }
+        .slide-logo {
+          filter: brightness(0) invert(1);
+        }
+        ion-button {
+          --color: #ffffff;
+          --background: transparent;
+          --border-color: #ffffff;
+          &.skip-button {
+            --color: #ffffff;
+          }
+          &:not(.skip-button) {
+            --background: #ffffff;
+            --color: var(--ion-color-primary);
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  .slide-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    .slide-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      ion-button {
+        min-width: 100px;
+        --border-radius: 8px;
+        font-weight: 600;
+        text-transform: none;
+      }
+    }
+    .slide-logo {
+      width: 200px;
+      height: auto;
+      margin-bottom: 2rem;
+    }
+    .slide-icon {
+      font-size: 4rem;
+      color: var(--ion-color-primary);
+      margin-bottom: 2rem;
+    }
+    .svg-img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1/1;
+      max-width: 300px;
+      margin-bottom: 2rem;
+      object-fit: contain;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: var(--ion-color-primary);
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      color: var(--ion-text-color);
+      max-width: 80%;
+    }
+    ion-button {
+      margin-top: 2rem;
+      &.skip-button {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
+    }
+  }
+  @media (max-height: 600px) {
+    .slide-content {
+      .slide-logo {
+        width: 150px;
+      }
+      .slide-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
