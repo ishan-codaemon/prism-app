@@ -1,7 +1,17 @@
 import { Component } from '@angular/core';
-import { IonContent } from '@ionic/angular/standalone';
+import {
+  IonContent,
+  IonCard,
+  IonCardHeader,
+  IonCardTitle,
+  IonCardSubtitle,
+  IonCardContent,
+  IonList,
+  IonItem,
+  IonLabel,
+  IonButton,
+} from '@ionic/angular/standalone';
 import { HeaderComponent } from '../../shared/header.component';
-
 @Component({
   selector: 'app-send',
   templateUrl: './send.page.html',
@@ -9,9 +19,18 @@ import { HeaderComponent } from '../../shared/header.component';
   standalone: true,
   imports: [
     IonContent,
-    HeaderComponent
-  ]
+    HeaderComponent,
+    IonCard,
+    IonCardHeader,
+    IonCardTitle,
+    IonCardSubtitle,
+    IonCardContent,
+    IonList,
+    IonItem,
+    IonLabel,
+    IonButton,
+  ],
 })
 export class SendPage {
-  constructor() { }
+  constructor() {}
 }

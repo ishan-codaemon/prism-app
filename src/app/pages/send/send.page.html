@@ -1,8 +1,36 @@
 <app-header [showBack]="true"></app-header>
 <ion-content [fullscreen]="true" class="ion-padding">
   <div class="ion-padding">
-    <h2>Send Message to Acentus</h2>
-    <p>Compose your message below:</p>
-    <!-- Add message form here -->
+    <h2>Send a message to Acentus</h2>
+    <ion-card class="ion-no-margin">
+      <ion-card-content>
+        <ion-list lines="none">
+          <ion-item href="mailto:service@acentus365.com" detail="true">
+            <ion-label>
+              <small>Email</small>
+              <br />
+              service&#64;acentus365.com
+            </ion-label>
+          </ion-item>
+          <ion-item href="tel:8666842507" detail="true">
+            <ion-label>
+              <small>Phone</small>
+              <br />
+              (866) 684-2507
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <small>Fax</small>
+              <br />
+              (866) 695-2183
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    <ion-button fill="outline" expand="block ion-margin-top">
+      Send message to Acentus
+    </ion-button>
   </div>
 </ion-content>

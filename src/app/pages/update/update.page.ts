@@ -7,7 +7,9 @@ import {
   IonButton,
   IonTextarea,
   IonLabel,
-  IonText
+  IonText,
+  IonCard,
+  IonCardContent
 } from '@ionic/angular/standalone';
 import { HeaderComponent } from '../../shared/header.component';
 
@@ -25,7 +27,9 @@ import { HeaderComponent } from '../../shared/header.component';
     IonButton,
     IonTextarea,
     IonLabel,
-    IonText
+    IonText,
+    IonCard,
+    IonCardContent
   ]
 })
 export class UpdatePage {

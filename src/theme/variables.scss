@@ -62,7 +62,15 @@
   --ion-color-dark-shade: #292929;
   --ion-color-dark-tint: #444444;
 
-  --ion-font-family: 'Mukta Mahee', sans-serif;
+  --ion-background-color: #eeeeee;
+  --ion-background-color-rgb: 255, 255, 255;
+  --ion-text-color: #000000;
+  --ion-text-color-rgb: 0, 0, 0;
+  --ion-item-background: #ffffff;
+  --ion-toolbar-background: #ffffff;
+  --ion-card-background: #ffffff;
+
+  --ion-font-family: "Mukta Mahee", sans-serif;
 }
 :root[color-theme="dark"] {
   --ion-background-color: #000000;
