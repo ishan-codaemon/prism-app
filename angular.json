@@ -56,7 +56,8 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/prism-app/"
+              "baseHref": "/prism-app/",
+              "verbose": false
             },
             "development": {
               "optimization": false,

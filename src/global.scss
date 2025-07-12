@@ -116,3 +116,28 @@ app-header {
 :root[color-theme="dark"] app-header {
   background: var(--ion-background-color, #2a2a2a);
 }
+@media (min-width: 768px) {
+  ion-app {
+    max-width: 480px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 12px 12px;
+  }
+  app-header {
+    max-width: 480px;
+    margin: 0 auto;
+    border-radius: 0 0 12px 12px;
+  }
+  body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+  }
+}
+@media (min-width: 1024px) {
+  ion-app {
+    max-width: 420px;
+  }
+  app-header {
+    max-width: 420px;
+  }
+}
