@@ -21,7 +21,6 @@ import {
   personOutline,
   mailOutline,
 } from 'ionicons/icons';
-
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',

@@ -14,7 +14,6 @@ import {
 } from '@ionic/angular/standalone';
 import { HeaderComponent } from '../../shared/header/header.component';
 import { CommonModule } from '@angular/common';
-
 @Component({
   selector: 'app-update',
   templateUrl: './update.page.html',
@@ -31,7 +30,7 @@ import { CommonModule } from '@angular/common';
     IonLabel,
     IonCard,
     IonCardContent,
-  ]
+  ],
 })
 export class UpdatePage {
   constructor() {}

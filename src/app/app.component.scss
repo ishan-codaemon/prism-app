@@ -1,7 +1,6 @@
 .ion-page {
   display: flex;
   flex-direction: column;
-  
   ion-content {
     --padding-top: 0;
     --padding-bottom: 0;
@@ -9,7 +8,6 @@
     --padding-end: 0;
   }
 }
-
 ion-app {
   app-header {
     position: fixed;
