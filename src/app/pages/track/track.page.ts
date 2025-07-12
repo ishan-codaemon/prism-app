@@ -10,6 +10,7 @@ import {
   IonList,
   IonItem,
   IonLabel,
+  IonListHeader,
 } from '@ionic/angular/standalone';
 import { HeaderComponent } from '../../shared/header.component';
 @Component({
@@ -29,6 +30,7 @@ import { HeaderComponent } from '../../shared/header.component';
     IonList,
     IonItem,
     IonLabel,
+    IonListHeader,
   ],
 })
 export class TrackPage {

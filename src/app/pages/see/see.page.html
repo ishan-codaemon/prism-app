@@ -1,67 +1,100 @@
 <app-header [showBack]="true"></app-header>
 <ion-content [fullscreen]="true" class="ion-padding">
-  <h2>See my supply order status</h2>
-  <ion-card class="ion-no-margin">
-    <ion-card-header>
-      <ion-card-title>
-        No worries, Acentus has shipped your next supply reorder.
-      </ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-text>
-        <p><strong>Order authorization date:</strong> 04/08/2025</p>
-        <p><strong>Order ship date:</strong> 04/15/2025</p>
-        <p><strong>Tracking #:</strong> 2558412584448872</p>
-      </ion-text>
-    </ion-card-content>
-  </ion-card>
-  <ion-list class="ion-padding">
-    <ion-item-group>
-      <ion-item-divider>
-        <ion-label>
-          You're a bit too early as Acentus can't ship your order just yet. Your
-          insurance requires you to authorize the next resupply no more than 10
-          days prior to your next ship date to prevent
-        </ion-label>
-      </ion-item-divider>
-      <ion-item>
-        <ion-label><strong>Next order auth date:</strong> 04/28/2025</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>
-          You will receive an email and/or text message on 04/28/2025 asking you
-          to authorize your next resupply order.
-        </ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label><strong>Next order ship date:</strong> 05/08/2025</ion-label>
-      </ion-item>
-    </ion-item-group>
-    <ion-item-group>
-      <ion-item-divider>
-        <ion-label>
-          Hold on, Acentus can't ship your next order just yet. Your insurance
-          requires us to collect your office visit notes every 6 months to
-          assure you still need a CGM for your diabetes care plan. We have not
-          received those updated notes.
-        </ion-label>
-      </ion-item-divider>
-      <ion-item>
-        <ion-label><strong>Next visit notes due:</strong> 04/25/2025</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>
-          We will contact <strong>XXXXXX XXXXXXXXX</strong> to request your
-          visit notes. You may also want to contact them at
-          <strong>813-555-1212</strong>
-        </ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>
-          <strong>Next available order ship date:</strong>
-          04/18/2025
-        </ion-label>
-      </ion-item>
-    </ion-item-group>
-  </ion-list>
+  <div class="ion-padding">
+    <h2>See my supply order status</h2>
+    <p>No worries, Acentus has shipped your next supply reorder.</p>
+    <ion-card class="ion-no-margin ion-margin-bottom">
+      <ion-card-content>
+        <ion-list lines="none">
+          <ion-item>
+            <ion-label>
+              <small>Order authorization date</small>
+              <br />
+              04/08/2025
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <small>Order ship date</small>
+              <br />
+              04/15/2025
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <small>Tracking #</small>
+              <br />
+              2558412584448872
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    <hr />
+    <p>
+      You're a bit too early as Acentus can't ship your order just yet. Your
+      insurance requires you to authorize the next resupply no more than 10 days
+      prior to your next ship date to prevent
+    </p>
+    <ion-card class="ion-no-margin ion-margin-bottom">
+      <ion-card-content>
+        <ion-list lines="none">
+          <ion-item>
+            <ion-label>
+              <small>Next order auth date</small>
+              <br />
+              04/28/2025
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <small>Next order ship date</small>
+              <br />
+              05/08/2025
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              You will receive an email and/or text message on 04/28/2025 asking
+              you to authorize your next resupply order.
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    <hr />
+    <p>
+      Hold on, Acentus can't ship your next order just yet. Your insurance
+      requires us to collect your office visit notes every
+      <strong>6 months</strong> to assure you still need a CGM for your diabetes
+      care plan. We have not received those updated notes.
+    </p>
+    <ion-card class="ion-no-margin ion-margin-bottom">
+      <ion-card-content>
+        <ion-list lines="none">
+          <ion-item>
+            <ion-label>
+              <small>Next visit notes due</small>
+              <br />
+              04/25/2025
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <small>Next available order ship date</small>
+              <br />
+              04/18/2025
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              We will contact <strong>XXXXXX XXXXXXXXX</strong>
+              to request your visit notes. You may also want to contact them at
+              <a href="tel:8135551212"><strong>813-555-1212</strong></a>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
