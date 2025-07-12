@@ -1,7 +1,16 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonBackButton, IonButtons } from '@ionic/angular/standalone';
+import {
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+  IonBackButton,
+  IonButtons,
+  IonList,
+  IonItem,
+  IonLabel,
+} from '@ionic/angular/standalone';
 import { HeaderComponent } from '../../shared/header.component';
-
 @Component({
   selector: 'app-replace',
   templateUrl: './replace.page.html',
@@ -14,9 +23,12 @@ import { HeaderComponent } from '../../shared/header.component';
     IonContent,
     IonBackButton,
     IonButtons,
-    HeaderComponent
-  ]
+    HeaderComponent,
+    IonList,
+    IonItem,
+    IonLabel,
+  ],
 })
 export class ReplacePage {
-  constructor() { }
+  constructor() {}
 }

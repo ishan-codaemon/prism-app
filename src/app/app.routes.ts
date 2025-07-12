@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-
 export const routes: Routes = [
   {
     path: 'home',
@@ -7,11 +6,13 @@ export const routes: Routes = [
   },
   {
     path: 'replace',
-    loadComponent: () => import('./pages/replace/replace.page').then((m) => m.ReplacePage),
+    loadComponent: () =>
+      import('./pages/replace/replace.page').then((m) => m.ReplacePage),
   },
   {
     path: 'track',
-    loadComponent: () => import('./pages/track/track.page').then((m) => m.TrackPage),
+    loadComponent: () =>
+      import('./pages/track/track.page').then((m) => m.TrackPage),
   },
   {
     path: 'see',
@@ -19,7 +20,8 @@ export const routes: Routes = [
   },
   {
     path: 'when',
-    loadComponent: () => import('./pages/when/when.page').then((m) => m.WhenPage),
+    loadComponent: () =>
+      import('./pages/when/when.page').then((m) => m.WhenPage),
   },
   {
     path: 'pay',
@@ -27,11 +29,13 @@ export const routes: Routes = [
   },
   {
     path: 'update',
-    loadComponent: () => import('./pages/update/update.page').then((m) => m.UpdatePage),
+    loadComponent: () =>
+      import('./pages/update/update.page').then((m) => m.UpdatePage),
   },
   {
     path: 'send',
-    loadComponent: () => import('./pages/send/send.page').then((m) => m.SendPage),
+    loadComponent: () =>
+      import('./pages/send/send.page').then((m) => m.SendPage),
   },
   {
     path: '',

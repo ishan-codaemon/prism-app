@@ -1,8 +1,28 @@
 <app-header [showBack]="true"></app-header>
 <ion-content [fullscreen]="true" class="ion-padding">
-  <div class="ion-padding">
-    <h2>Track Supply Order</h2>
-    <p>View the status of your supply order here.</p>
-    <!-- Add tracking content here -->
-  </div>
+  <h2>Track my supply order</h2>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Your most recent order</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-text>
+        <p><strong>Order authorization date:</strong> 04/08/2025</p>
+        <p><strong>Order ship date:</strong> 04/15/2025</p>
+        <p><strong>Tracking #:</strong> 2558412584448872</p>
+      </ion-text>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Your past orders</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-text>
+        <p><strong>01/08/2025</strong> 2558412584448872</p>
+        <p><strong>10/08/2024</strong> 556662584448814</p>
+        <p><strong>06/07/2024</strong> 8588744555966</p>
+      </ion-text>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

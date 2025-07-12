@@ -1,7 +1,19 @@
 import { Component } from '@angular/core';
-import { IonContent } from '@ionic/angular/standalone';
+import {
+  IonContent,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardTitle,
+  IonCardSubtitle,
+  IonText,
+  IonList,
+  IonItem,
+  IonItemGroup,
+  IonItemDivider,
+  IonLabel,
+} from '@ionic/angular/standalone';
 import { HeaderComponent } from '../../shared/header.component';
-
 @Component({
   selector: 'app-see',
   templateUrl: './see.page.html',
@@ -9,9 +21,20 @@ import { HeaderComponent } from '../../shared/header.component';
   standalone: true,
   imports: [
     IonContent,
-    HeaderComponent
-  ]
+    HeaderComponent,
+    IonCard,
+    IonCardContent,
+    IonCardHeader,
+    IonCardTitle,
+    IonCardSubtitle,
+    IonText,
+    IonList,
+    IonItem,
+    IonItemGroup,
+    IonItemDivider,
+    IonLabel,
+  ],
 })
 export class SeePage {
-  constructor() { }
+  constructor() {}
 }

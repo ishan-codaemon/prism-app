@@ -1,5 +1,14 @@
 import { Component } from '@angular/core';
-import { IonContent } from '@ionic/angular/standalone';
+import {
+  IonContent,
+  IonList,
+  IonItem,
+  IonInput,
+  IonButton,
+  IonTextarea,
+  IonLabel,
+  IonText
+} from '@ionic/angular/standalone';
 import { HeaderComponent } from '../../shared/header.component';
 
 @Component({
@@ -9,9 +18,16 @@ import { HeaderComponent } from '../../shared/header.component';
   standalone: true,
   imports: [
     IonContent,
-    HeaderComponent
+    HeaderComponent,
+    IonList,
+    IonItem,
+    IonInput,
+    IonButton,
+    IonTextarea,
+    IonLabel,
+    IonText
   ]
 })
 export class UpdatePage {
-  constructor() { }
+  constructor() {}
 }
