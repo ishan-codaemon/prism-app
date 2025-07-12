@@ -8,4 +8,9 @@ ion-list {
   display: flex;
   flex-direction: column;
   background: transparent;
+  ion-item {
+    ion-label {
+      line-height: 1.2;
+    }
+  }
 }

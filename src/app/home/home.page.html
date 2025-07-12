@@ -1,16 +1,29 @@
 <app-header></app-header>
 <ion-content [fullscreen]="true" class="ion-padding">
-  <ion-grid>
-    <ion-text><h1>What would you like to do?</h1></ion-text>
-    <ion-button expand="full" fill="outline" routerLink="/replace">Replace a non-working or faulty sensor</ion-button>
-    <ion-button expand="full" fill="outline" routerLink="/track">Track my supply order</ion-button>
-    <ion-button expand="full" fill="outline" routerLink="/see">See my supply order status</ion-button>
-    <ion-button expand="full" fill="outline" routerLink="/when">When do I need updated office visit notes</ion-button>
-    <ion-button expand="full" fill="outline" routerLink="/pay">Pay my $XX.XX account balance</ion-button>
-    <ion-button expand="full" fill="outline" routerLink="/update">Update my personal information</ion-button>
-    <ion-button expand="full" fill="outline" routerLink="/send">Send a message to Acentus</ion-button>
-  </ion-grid>
+  <div class="ion-padding">
+    <ion-grid>
+      <ion-text><h1>What would you like to do?</h1></ion-text>
+      <ion-button expand="full" routerLink="/replace">
+        Replace a non-working or faulty sensor
+      </ion-button>
+      <ion-button expand="full" routerLink="/track">
+        Track my supply order
+      </ion-button>
+      <ion-button expand="full" routerLink="/see">
+        See my supply order status
+      </ion-button>
+      <ion-button expand="full" routerLink="/when">
+        When do I need updated office visit notes
+      </ion-button>
+      <ion-button expand="full" routerLink="/pay">
+        Pay my $XX.XX account balance
+      </ion-button>
+      <ion-button expand="full" routerLink="/update">
+        Update my personal information
+      </ion-button>
+      <ion-button expand="full" routerLink="/send">
+        Send a message to Acentus
+      </ion-button>
+    </ion-grid>
+  </div>
 </ion-content>
-
-
-
