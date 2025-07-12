@@ -4,11 +4,9 @@
       <ion-back-button defaultHref="/home" [class.hidden-back]="!showBack"></ion-back-button>
     </ion-buttons>
     <ion-title>
-      <ion-img
-        src="assets/logo.png"
-        alt="Acentus Logo"
-        class="header-logo"
-      ></ion-img>
+      <a routerLink="/home">
+        <ion-img src="assets/logo.png" alt="Acentus Logo" class="header-logo"></ion-img>
+      </a>
     </ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="openMenu()">

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, inject } from '@angular/core';
-import { NgIf } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import {
   IonHeader,
   IonToolbar,
@@ -28,15 +28,14 @@ import { filter } from 'rxjs/operators';
     IonButton,
     IonIcon,
     IonImg,
+    RouterLink,
   ],
   standalone: true,
 })
 export class HeaderComponent implements OnInit {
   @Input() showBack: boolean = false;
-  
   private menuController = inject(MenuController);
   private router = inject(Router);
-  
   constructor() {
     addIcons({
       reorderThree,
@@ -45,7 +44,6 @@ export class HeaderComponent implements OnInit {
   }
   ngOnInit() {
     if (this.showBack === false) {
-      // Only auto-detect if not explicitly set
       this.showBack = this.router.url !== '/home';
       this.router.events
         .pipe(filter((event) => event instanceof NavigationEnd))
