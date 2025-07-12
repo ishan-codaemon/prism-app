@@ -15,9 +15,6 @@ import { HeaderComponent } from '../shared/header.component';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   imports: [
-    IonHeader,
-    IonToolbar,
-    IonTitle,
     IonContent,
     HeaderComponent,
     IonText,

@@ -22,8 +22,6 @@ import { HeaderComponent } from '../../shared/header.component';
     HeaderComponent,
     IonCard,
     IonCardHeader,
-    IonCardTitle,
-    IonCardSubtitle,
     IonCardContent,
     IonList,
     IonItem,

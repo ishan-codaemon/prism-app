@@ -7,7 +7,6 @@ import {
   IonButton,
   IonTextarea,
   IonLabel,
-  IonText,
   IonCard,
   IonCardContent
 } from '@ionic/angular/standalone';
@@ -23,11 +22,8 @@ import { HeaderComponent } from '../../shared/header.component';
     HeaderComponent,
     IonList,
     IonItem,
-    IonInput,
     IonButton,
-    IonTextarea,
     IonLabel,
-    IonText,
     IonCard,
     IonCardContent
   ]

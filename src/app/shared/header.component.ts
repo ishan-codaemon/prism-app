@@ -1,4 +1,4 @@
-import { Component, Input, HostBinding } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgIf } from '@angular/common';
 import {
   IonHeader,
@@ -8,9 +8,11 @@ import {
   IonBackButton,
   IonButton,
   IonIcon,
+  MenuController,
 } from '@ionic/angular/standalone';
-import { sunny, moon } from 'ionicons/icons';
+import { reorderThree } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -30,8 +32,8 @@ import { addIcons } from 'ionicons';
 export class HeaderComponent {
   @Input() showBack: boolean = false;
   isDarkMode: boolean = false;
-  constructor() {
-    addIcons({ sunny, moon });
+  constructor(private menuController: MenuController) {
+    addIcons({ reorderThree });
     this.initializeTheme();
   }
   private initializeTheme() {
@@ -52,5 +54,9 @@ export class HeaderComponent {
     if (this.isDarkMode) root.setAttribute('color-theme', 'dark');
     else root.setAttribute('color-theme', 'light');
     localStorage.setItem('theme', this.isDarkMode ? 'dark' : 'light');
+  }
+
+  async openMenu() {
+    await this.menuController.open();
   }
 }

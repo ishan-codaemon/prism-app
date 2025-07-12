@@ -20,12 +20,7 @@ import { HeaderComponent } from '../../shared/header.component';
   styleUrls: ['./replace.page.scss'],
   standalone: true,
   imports: [
-    IonHeader,
-    IonToolbar,
-    IonTitle,
     IonContent,
-    IonBackButton,
-    IonButtons,
     HeaderComponent,
     IonList,
     IonItem,

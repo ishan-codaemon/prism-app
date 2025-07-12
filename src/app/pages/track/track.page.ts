@@ -24,13 +24,10 @@ import { HeaderComponent } from '../../shared/header.component';
     IonCard,
     IonCardHeader,
     IonCardTitle,
-    IonCardSubtitle,
     IonCardContent,
-    IonText,
     IonList,
     IonItem,
     IonLabel,
-    IonListHeader,
   ],
 })
 export class TrackPage {
