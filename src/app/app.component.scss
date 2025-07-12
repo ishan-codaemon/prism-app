@@ -17,27 +17,3 @@ ion-app {
     z-index: 999;
   }
 }
-
-.menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 1000;
-  pointer-events: none;
-  
-  &.visible {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-}
-
-:host-context(.dark) .menu-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-}

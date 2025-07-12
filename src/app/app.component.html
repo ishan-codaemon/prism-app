@@ -8,11 +8,4 @@
     <app-header *ngIf="showHeader"></app-header>
     <ion-router-outlet></ion-router-outlet>
   </div>
-  
-  <!-- Custom overlay for menu -->
-  <div 
-    class="menu-overlay" 
-    [class.visible]="isMenuOpen"
-    (click)="onOverlayClick()"
-  ></div>
 </ion-app>
