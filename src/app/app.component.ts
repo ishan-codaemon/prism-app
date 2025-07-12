@@ -8,11 +8,9 @@ import { SideMenuComponent } from './shared/side-menu.component';
 })
 export class AppComponent {
   isDarkMode: boolean = false;
-
   constructor() {
     this.initializeTheme();
   }
-
   private initializeTheme() {
     const storedTheme = localStorage.getItem('theme');
     if (storedTheme) {
@@ -24,7 +22,6 @@ export class AppComponent {
     }
     this.toggleDarkMode(this.isDarkMode);
   }
-
   toggleDarkMode(shouldBeDark?: boolean) {
     this.isDarkMode = shouldBeDark ?? !this.isDarkMode;
     document.body.classList.toggle('dark', this.isDarkMode);

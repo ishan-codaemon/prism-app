@@ -13,7 +13,6 @@ import {
   IonToggle,
   MenuController,
 } from '@ionic/angular/standalone';
-
 @Component({
   selector: 'app-side-menu',
   templateUrl: './side-menu.component.html',
@@ -36,9 +35,7 @@ import {
 export class SideMenuComponent {
   @Input() isDarkMode: boolean = false;
   @Input() onToggleTheme: (isDark: boolean) => void = () => {};
-
   constructor(private menuController: MenuController) {}
-
   toggleDarkMode() {
     this.onToggleTheme(this.isDarkMode);
   }
