@@ -4,8 +4,12 @@ import {
   IonCard,
   IonCardHeader,
   IonCardTitle,
+  IonCardSubtitle,
   IonCardContent,
   IonText,
+  IonList,
+  IonItem,
+  IonLabel,
 } from '@ionic/angular/standalone';
 import { HeaderComponent } from '../../shared/header.component';
 @Component({
@@ -19,8 +23,12 @@ import { HeaderComponent } from '../../shared/header.component';
     IonCard,
     IonCardHeader,
     IonCardTitle,
+    IonCardSubtitle,
     IonCardContent,
     IonText,
+    IonList,
+    IonItem,
+    IonLabel,
   ],
 })
 export class TrackPage {

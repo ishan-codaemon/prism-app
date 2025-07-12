@@ -9,6 +9,9 @@ import {
   IonList,
   IonItem,
   IonLabel,
+  IonCard,
+  IonCardContent,
+  IonListHeader,
 } from '@ionic/angular/standalone';
 import { HeaderComponent } from '../../shared/header.component';
 @Component({
@@ -27,6 +30,9 @@ import { HeaderComponent } from '../../shared/header.component';
     IonList,
     IonItem,
     IonLabel,
+    IonCard,
+    IonCardContent,
+    IonListHeader,
   ],
 })
 export class ReplacePage {

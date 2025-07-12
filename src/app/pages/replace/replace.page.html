@@ -1,34 +1,44 @@
 <app-header [showBack]="true"></app-header>
 <ion-content [fullscreen]="true" class="ion-padding">
-  <h2>Replace a non-working or faulty sensor</h2>
-  <p>
-    Each CGM manufacturer has a replacement process to help improve their
-    products. Follow these steps to get a replacement.
-  </p>
-  <ion-list>
-    <ion-item>
-      <ion-label>
-        Do NOT throw away your damaged or non-working sensor
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>
-        Freestyle Libre CGM users, contact Abbott Customer service at
-        855-632-8658, or <a href="#">CLICK HERE</a> for Abbott's online
-        replacement form.
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>
-        Dexcom G7 CGM users, contact Dexcom Customer service at 888-738-3646, or
-        <a href="#">CLICK HERE</a> for Dexcom's online replacement form.
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>
-        Ask for expedited delivery and REFUSE a pharmacy coupon as it will
-        require a new RX from your doctor.
-      </ion-label>
-    </ion-item>
-  </ion-list>
+  <div class="ion-padding">
+    <h2>Replace a non-working or faulty sensor</h2>
+    <p>
+      Each CGM manufacturer has a replacement process to help improve their
+      products.
+    </p>
+    <ion-card class="ion-no-margin ion-margin-bottom">
+      <ion-card-content>
+        <ion-list lines="none">
+          <ion-list-header>
+            <ion-label>Follow these steps to get a replacement</ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label>
+              &bull; Do NOT throw away your damaged or non-working sensor
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              &bull; Freestyle Libre CGM users, contact Abbott Customer service
+              at 855-632-8658, or <a href="#">CLICK HERE</a> for Abbott's online
+              replacement form.
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              &bull; Dexcom G7 CGM users, contact Dexcom Customer service at
+              <a href="tel:8887383646">888-738-3646</a>, or
+              <a href="#">CLICK HERE</a> for Dexcom's online replacement form.
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              &bull; Ask for expedited delivery and REFUSE a pharmacy coupon as
+              it will require a new RX from your doctor.
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
