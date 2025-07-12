@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonContent, IonButton } from '@ionic/angular/standalone';
-import { HeaderComponent } from '../../shared/header.component';
+import { HeaderComponent } from '../../shared/header/header.component';
 @Component({
   selector: 'app-pay',
   templateUrl: './pay.page.html',

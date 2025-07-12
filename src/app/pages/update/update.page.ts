@@ -12,7 +12,7 @@ import {
   IonCardContent,
   IonText,
 } from '@ionic/angular/standalone';
-import { HeaderComponent } from '../../shared/header.component';
+import { HeaderComponent } from '../../shared/header/header.component';
 import { CommonModule } from '@angular/common';
 
 @Component({

@@ -7,7 +7,7 @@ import {
   IonItem,
   IonLabel,
 } from '@ionic/angular/standalone';
-import { HeaderComponent } from '../../shared/header.component';
+import { HeaderComponent } from '../../shared/header/header.component';
 @Component({
   selector: 'app-when',
   templateUrl: './when.page.html',

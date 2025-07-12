@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
-import { SideMenuComponent } from './shared/side-menu.component';
-import { HeaderComponent } from './shared/header.component';
+import { SideMenuComponent } from './shared/side-menu/side-menu.component';
+import { HeaderComponent } from './shared/header/header.component';
 import { RouteReuseStrategy } from '@angular/router';
 import { IonicRouteStrategy } from '@ionic/angular/standalone';
 
