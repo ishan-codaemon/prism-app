@@ -3,7 +3,13 @@
     <ion-buttons slot="start" *ngIf="showBack">
       <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
-    <ion-title>Hello TODD CIANFROCCA</ion-title>
+    <div class="logo-title">
+      <ion-img
+        src="assets/logo.png"
+        alt="Acentus Logo"
+        class="header-logo"
+      ></ion-img>
+    </div>
     <ion-buttons slot="end">
       <ion-button (click)="openMenu()">
         <ion-icon

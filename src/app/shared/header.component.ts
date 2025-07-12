@@ -8,6 +8,7 @@ import {
   IonBackButton,
   IonButton,
   IonIcon,
+  IonImg,
   MenuController,
 } from '@ionic/angular/standalone';
 import { reorderThree } from 'ionicons/icons';
@@ -19,11 +20,11 @@ import { addIcons } from 'ionicons';
   imports: [
     IonHeader,
     IonToolbar,
-    IonTitle,
     IonButtons,
     IonBackButton,
     IonButton,
     IonIcon,
+    IonImg,
     NgIf,
   ],
   standalone: true,

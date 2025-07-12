@@ -1,16 +1,21 @@
 ion-content {
-  --background: var(--ion-background-color);
   height: 100%;
-}
-
-ion-list {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  background: transparent;
-  ion-item {
-    ion-label {
-      line-height: 1.2;
+  ion-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    ion-item {
+      ion-label {
+        line-height: 1.2;
+      }
     }
   }
+}
+:host-context(.dark) ion-content ion-list {
+  background: #1e1e1e;
+}
+ion-title {
+  padding-left: 15px;
+  padding-right: 15px;
 }

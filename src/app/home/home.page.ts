@@ -1,15 +1,28 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import {
-  IonHeader,
-  IonToolbar,
-  IonTitle,
   IonContent,
   IonText,
-  IonButton,
   IonGrid,
+  IonCard,
+  IonCardContent,
+  IonList,
+  IonItem,
+  IonLabel,
+  IonIcon,
 } from '@ionic/angular/standalone';
 import { HeaderComponent } from '../shared/header.component';
+import { addIcons } from 'ionicons';
+import {
+  hardwareChipOutline,
+  cubeOutline,
+  listOutline,
+  calendarOutline,
+  cardOutline,
+  personOutline,
+  mailOutline,
+} from 'ionicons/icons';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -18,12 +31,27 @@ import { HeaderComponent } from '../shared/header.component';
     IonContent,
     HeaderComponent,
     IonText,
-    IonButton,
     RouterLink,
     IonGrid,
+    IonCard,
+    IonCardContent,
+    IonList,
+    IonItem,
+    IonLabel,
+    IonIcon,
   ],
   standalone: true,
 })
 export class HomePage {
-  constructor() {}
+  constructor() {
+    addIcons({
+      hardwareChipOutline,
+      cubeOutline,
+      listOutline,
+      calendarOutline,
+      cardOutline,
+      personOutline,
+      mailOutline,
+    });
+  }
 }
