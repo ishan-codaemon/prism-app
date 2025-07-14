@@ -5,36 +5,20 @@
   swiper-container {
     --swiper-theme-color: #ea3f3d;
     height: 100%;
+    background: url('../../assets/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     swiper-slide:first-child {
-      background: linear-gradient(135deg, var(--ion-color-primary) 0%, var(--ion-color-secondary) 100%);
       .slide-content {
-        color: #ffffff;
-        h1,
-        p {
-          color: #ffffff;
-        }
+        justify-content: center;
+        padding-top: 2rem;
         .svg-img {
           width: 100% !important;
           height: auto !important;
           aspect-ratio: 1/1 !important;
-          max-width: 300px;
-          margin-bottom: 2rem;
-        }
-        .slide-logo {
-          filter: brightness(0) invert(1);
-        }
-        ion-button {
-          --color: #ffffff;
-          --background: transparent;
-          --border-color: #ffffff;
-          &.skip-button {
-            --color: #ffffff;
-          }
-          &:not(.skip-button) {
-            --background: #ffffff;
-            --color: var(--ion-color-primary);
-            font-weight: bold;
-          }
+          max-width: 250px;
+          margin-bottom: 1rem;
         }
       }
     }
@@ -43,14 +27,15 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 2rem;
+    padding: 3rem 2rem 6rem 2rem;
     text-align: center;
+    padding-top: 10vh;
     .slide-buttons {
       display: flex;
       gap: 1rem;
-      margin-top: 2rem;
+      margin-top: 1rem;
       margin-bottom: 1rem;
       ion-button {
         min-width: 100px;
@@ -60,38 +45,38 @@
       }
     }
     .slide-logo {
-      width: 200px;
+      width: 250px;
       height: auto;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
     .slide-icon {
-      font-size: 4rem;
+      font-size: 3.5rem;
       color: var(--ion-color-primary);
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
     .svg-img {
       width: 100%;
       height: auto;
       aspect-ratio: 1/1;
-      max-width: 300px;
-      margin-bottom: 2rem;
+      max-width: 250px;
+      margin-bottom: 1rem;
       object-fit: contain;
     }
     h1 {
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: bold;
-      margin-bottom: 1rem;
-      color: var(--ion-color-primary);
+      margin-bottom: 0.8rem;
+      color: #052c5c !important;
     }
     p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      margin-bottom: 2rem;
-      color: var(--ion-text-color);
-      max-width: 80%;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+      color: #052c5c !important;
+      max-width: 85%;
     }
     ion-button {
-      margin-top: 2rem;
+      margin-top: 1rem;
       &.skip-button {
         position: absolute;
         top: 1rem;
@@ -101,18 +86,26 @@
   }
   @media (max-height: 600px) {
     .slide-content {
+      padding-top: 5vh;
+      padding-bottom: 5rem;
       .slide-logo {
-        width: 150px;
+        width: 140px;
       }
       .slide-icon {
-        font-size: 3rem;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      .svg-img {
+        max-width: 200px;
         margin-bottom: 1rem;
       }
       h1 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
       }
       p {
         font-size: 1rem;
+        margin-bottom: 1rem;
       }
     }
   }

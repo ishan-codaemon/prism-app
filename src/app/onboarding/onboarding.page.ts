@@ -8,10 +8,6 @@ import { addIcons } from 'ionicons';
 import {
   chevronForward,
   chevronBack,
-  arrowForward,
-  locationOutline,
-  calendarOutline,
-  settingsOutline,
 } from 'ionicons/icons';
 @Component({
   selector: 'app-onboarding',
@@ -36,10 +32,6 @@ export class OnboardingPage implements OnInit {
     addIcons({
       chevronForward,
       chevronBack,
-      arrowForward,
-      locationOutline,
-      calendarOutline,
-      settingsOutline,
     });
   }
   ngOnInit() {
@@ -57,7 +49,6 @@ export class OnboardingPage implements OnInit {
     const swiper = event.target.swiper;
     const activeIndex = swiper.activeIndex;
     const totalSlides = swiper.slides.length;
-    
     const skipButton = document.querySelector('.skip-button') as HTMLElement;
     if (skipButton) {
       if (activeIndex === totalSlides - 1) skipButton.style.display = 'none';
