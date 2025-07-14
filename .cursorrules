@@ -1,0 +1,56 @@
+# Project Rules for AI Assistant
+
+## Code Style & Standards
+- Always use TypeScript strict mode
+- Use Angular's inject() function instead of constructor injection
+- Follow Ionic/Angular naming conventions
+- Use standalone components
+- Prefer functional programming patterns
+- Prefer arrow function
+- Single-line arrow functions and conditions should not use brackets
+- Keep code minimal and concise
+- Keep HTML elements on single lines when possible - avoid unnecessary line breaks
+- Put all element attributes on one line instead of spreading across multiple lines
+- Keep element content inline when short - avoid multi-line formatting for simple content
+- No double new lines - use only single line breaks between code blocks
+
+## File Organization
+- Keep components, services, and pages in their respective folders
+- Use barrel exports (index.ts) for cleaner imports
+- Follow the feature-based folder structure
+
+## CSS/SCSS Guidelines
+- Use CSS custom properties for theming
+- Support both light and dark modes
+- Prioritize Ionic CSS variables
+- Keep component styles scoped and organized
+
+## Comments & Documentation
+- Remove unnecessary comments
+- Use JSDoc for public APIs
+- Keep README files updated
+
+## Testing & Quality
+- Run ESLint before committing
+- Fix all linting errors
+- Ensure responsive design works on mobile and desktop
+- Test dark mode functionality
+
+## Git & Deployment
+- Run linting before pushing
+- Build and test before deployment
+- Use meaningful commit messages
+- Deploy to GitHub Pages using npm run deploy
+
+## Ionic/Angular Specific
+- Use Ionic components over custom HTML elements
+- Implement proper navigation patterns
+- Handle back button behavior correctly
+- Use Ionic lifecycle hooks appropriately
+- Optimize for mobile performance
+
+## Accessibility
+- Include proper ARIA labels
+- Ensure keyboard navigation works
+- Maintain good color contrast ratios
+- Test with screen readers when possible
