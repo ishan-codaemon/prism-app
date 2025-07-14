@@ -11,8 +11,20 @@ import {
   IonItem,
   IonLabel,
   IonToggle,
+  IonIcon,
   MenuController,
 } from '@ionic/angular/standalone';
+import { addIcons } from 'ionicons';
+import {
+  homeOutline,
+  hardwareChipOutline,
+  cubeOutline,
+  listOutline,
+  pencilOutline,
+  cardOutline,
+  personOutline,
+  mailOutline,
+} from 'ionicons/icons';
 @Component({
   selector: 'app-side-menu',
   templateUrl: './side-menu.component.html',
@@ -28,6 +40,7 @@ import {
     IonItem,
     IonLabel,
     IonToggle,
+    IonIcon,
     FormsModule,
     RouterLink,
   ],
@@ -35,9 +48,19 @@ import {
 export class SideMenuComponent {
   @Input() isDarkMode: boolean = false;
   @Input() onDarkModeChange!: (isDark: boolean) => void;
-  
   private menuController = inject(MenuController);
-  
+  constructor() {
+    addIcons({
+      homeOutline,
+      hardwareChipOutline,
+      cubeOutline,
+      listOutline,
+      pencilOutline,
+      cardOutline,
+      personOutline,
+      mailOutline,
+    });
+  }
   async closeMenu() {
     await this.menuController.close();
   }
